@@ -8,15 +8,15 @@
         <a-scene>
             
     <a-sky
-        color="lightgreen"
+        color="lightblue"
     ></a-sky>
             
     <a-torus 
         position="-2 4 -5"
         color="green" 
-        arc="270" 
+        arc="180" 
         radius="1" 
-        radius-tubular="0.2"
+        radius-tubular="0.1"
     ></a-torus>
     
 <!--
@@ -27,17 +27,20 @@ https://aframe.io/docs/1.1.0/primitives/a-cone.html
     <a-cone 
         position="2 4 -5"
         color="red"
+        rotation=""
+        radius-top="0.7"
+        radius-bottom="1.3"
     ></a-cone>
 
 <!--
 Hmm. What 3D shape has four sides? 
 Stuck: ask Google and check the documentation...
 -->
-    <a-box 
+    <a-tetrahedron 
         position="-2 0 -5"
         color="orange"
         wireframe=true
-    ></a-box>
+    ></a-tetrahedron>
     
 <!--
 The purple shape looks odd. It looks a bit like a <hint> knot </hint>.
@@ -46,8 +49,15 @@ You will need to mess with it's attributes.
 
 Put it at position="10 -5 -30"
 -->
+<a-torus-knot
+position="10 -5 -30"
+color="purple"
+scale="4 4 4"
+radius-tubular="0.15"
 
-    
+></a-torus-knot>
+
+
         </a-scene>
     </body>
 </html>
